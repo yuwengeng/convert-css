@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <title>Convert CSS string to React Style Object</title>
+  </head>
+
+  <body>
+    <div class="root">
+        <h1>CSS string to React Style Object</h1>
+    </div>
+
+    <div class="text-area-view">
+      <div style="display: flex; flex-direction: column">
+        <textarea id="inp" class="text-area" placeholder="Input your CSS here"></textarea>
+        <button class="button" onclick="convert()">Convert</button>
+      </div>
+
+      <div style="display: flex; flex-direction: column">
+        <textarea id="out" class="text-area"></textarea>
+        <button class="button" onclick="copyToClipboard('out')">Copy</button>
+      </div>
+    </div>
+
+    <div class="example">
+      <h2>Examples:</h2>
+      <pre>style = "display: flex;justify-content: center; text-align: center"</pre> converts to <pre>style={{ display: "flex", justifyContent: "center", textAlign: "center" }}</pre>
+      <br/>
+      <span>Or</span>
+      <pre>display: flex;justify-content: center; text-align: center;</pre> converts to <pre>{{ display: "flex", justifyContent: "center", textAlign: "center" }}</pre>
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="./assets/script.js"></script>
+
+</html>
+
+
